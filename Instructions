@@ -1,0 +1,25 @@
+
+- Update the Raspian OS
+  sudo apt-get update
+  sudo apt-get upgrade
+  
+- Turn off Sleep
+  sudo nano ~/.config/lxsession/LXDE-pi/autostart
+  Using directional keys move the cursor down the end of the file
+  
+  + Add the following lines
+  @xset s 0 0
+  @xset s noblank
+  @xset s noexpose
+  @xset dpms 0 0 0
+  
+  + Save the changes
+  Ctrl + X 
+  Hit 'y' and then enter
+  
+  sudo reboot
+
+- Disable Mouse Cursor
+  sudo apt-get install unclutter
+  unclutter -display :0 -noevents -grab
+  
